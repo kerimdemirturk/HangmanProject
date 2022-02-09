@@ -37,6 +37,12 @@ while True:
             elif letter not in guess_word_set:
                 print("That letter doesn't appear in the word")
                 tries -= 1
+                if(tries > 1):
+                  print("Your remaining guess are" + " " + str(tries))
+                elif(tries == 1):
+                  print("Your remaining guess is" + " " + str(tries))
+                else:
+                  print("You have no more guessing.")
                 useless_letters.add(letter)
             elif letter.isupper():
                 print("Please enter a lowercase English letter")
